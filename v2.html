@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine Property Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #ffffff, #f1f1f1);
+            color: #333;
+        }
+        header {
+            background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        header p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        nav {
+            background: #2c3e50;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .section-box {
+            background: #fff;
+            margin: 3rem auto;
+            max-width: 1000px;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+        }
+        .section-box h2, .section-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        .section-box ul {
+            text-align: left;
+            max-width: 700px;
+            margin: 1rem auto;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        .contact p {
+            margin: 0.75rem 0;
+        }
+        .contact button {
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .contact button:hover {
+            background: #1a242f;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        /* Animations */
+        .animate {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll(".section-box").forEach(el => {
+                el.classList.add("animate");
+                observer.observe(el);
+            });
+        });
+    </script>
+</head>
+<body>
+<header>
+    <h1>Alpine Property Services</h1>
+    <p>Your trusted partner in professional property care and facility maintenance.</p>
+</header>
+
+<nav>
+    <a href="#about">About Us</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <div class="section-box">
+        <h2>About Us</h2>
+        <p>Founded in the heart of the Alps, Alpine Property Services is a locally trusted business dedicated to keeping your properties safe, clean, and beautiful all year round. With a team of trained professionals and a passion for excellence, we specialize in delivering customized solutions for every client.</p>
+    </div>
+</section>
+
+<section id="why-us">
+    <div class="section-box">
+        <h2>Why Choose Us?</h2>
+        <p>We don’t just maintain properties — we build lasting relationships with our clients. Here’s why:</p>
+        <ul>
+            <li><strong>24/7 Availability:</strong> Emergencies don’t wait — and neither do we.</li>
+            <li><strong>Local Expertise:</strong> We know the terrain, climate, and needs of Alpine properties.</li>
+            <li><strong>Eco-Conscious Practices:</strong> Sustainable methods and products are our standard.</li>
+            <li><strong>Fully Insured & Certified:</strong> Peace of mind comes standard with every service.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="section-box">
+        <h2>Comprehensive Services. Outstanding Quality.</h2>
+        <p>We provide reliable, efficient, and year-round services for both residential and commercial properties. Our mission is to deliver peace of mind to every property owner through high-quality service and 24/7 availability.</p>
+    </div>
+</section>
+
+<section id="services">
+    <div class="section-box">
+        <div class="services">
+            <div class="card">
+                <h2>Exterior Maintenance</h2>
+                <p>Driveways, gardens, lawn mowing, pressure washing, and general upkeep to keep your property pristine.</p>
+            </div>
+            <div class="card">
+                <h2>Interior Maintenance</h2>
+                <p>Thorough cleaning, sanitization, lighting inspections, and HVAC system checks for your property’s interior.</p>
+            </div>
+            <div class="card">
+                <h2>Office Cleaning</h2>
+                <p>Flexible cleaning plans tailored for business environments, including desks, bathrooms, and breakrooms.</p>
+            </div>
+            <div class="card">
+                <h2>Solar Panel Cleaning</h2>
+                <p>Improve efficiency with expert panel cleaning using eco-friendly, non-abrasive methods.</p>
+            </div>
+            <div class="card">
+                <h2>Snow Removal</h2>
+                <p>Fast and reliable snow and ice clearance from walkways, driveways, and rooftops during winter months.</p>
+            </div>
+            <div class="card">
+                <h2>24/7 Emergency Support</h2>
+                <p>Always ready for urgent interventions and maintenance—any time, any day.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="section-box contact">
+        <h3>Contact Us</h3>
+        <p><strong>Phone:</strong> +41 79 123 45 67</p>
+        <p><strong>Email:</strong> contact@alpineproperty.ch</p>
+        <p><strong>Address:</strong> 123 Mountain Ave, Zurich, Switzerland</p>
+        <button>Send Inquiry</button>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 Alpine Property Services. All rights reserved.
+</footer>
+</body>
+</html>
