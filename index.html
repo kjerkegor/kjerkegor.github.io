@@ -90,6 +90,70 @@
                 text-align: center;
             }
         }
+
+        #about .section-box {
+            position: relative;
+            background: url('logosvg.png') center/cover no-repeat;
+            background-size: 80%;
+            color: #2c3e50;
+            overflow: hidden;
+        }
+
+        #about .section-box::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.8); /* white overlay like banner */
+            z-index: 0;
+        }
+
+        #about .section-box > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        #why-us .section-box {
+            position: relative;
+            background: url('logosvg.png') center/cover no-repeat;
+            background-size: 80%;
+            color: #2c3e50;
+            overflow: hidden;
+        }
+
+        #why-us .section-box::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.8); /* white overlay like banner */
+            z-index: 0;
+        }
+
+        #why-us .section-box > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        #excellence .section-box {
+            position: relative;
+            background: url('logosvg.png') center/cover no-repeat;
+            background-size: 80%;
+            color: #2c3e50;
+            overflow: hidden;
+        }
+
+        #excellence .section-box::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.8); /* white overlay like banner */
+            z-index: 0;
+        }
+
+        #excellence .section-box > * {
+            position: relative;
+            z-index: 1;
+        }
+
         .section-box {
             background: #fff;
             margin: 3rem auto;
@@ -130,6 +194,50 @@
             margin-bottom: 0.5rem;
             color: #2c3e50;
         }
+
+        #services .card:nth-child(1) {
+            background:
+                    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+                    url('1.png') center/cover no-repeat;
+            color: #2c3e50; /* dark text, since background is now lighter */
+        }
+
+        #services .card:nth-child(2) {
+            background:
+                    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+                    url('2.jpg') center/cover no-repeat;
+            color: #2c3e50; /* dark text, since background is now lighter */
+        }
+
+        #services .card:nth-child(3) {
+            background:
+                    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+                    url('3.jpg') center/cover no-repeat;
+            color: #2c3e50; /* dark text, since background is now lighter */
+        }
+
+        #services .card:nth-child(4) {
+            background:
+                    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+                    url('4.jpg') center/cover no-repeat;
+            color: #2c3e50; /* dark text, since background is now lighter */
+        }
+
+        #services .card:nth-child(5) {
+            background:
+                    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+                    url('5.jpg') center/cover no-repeat;
+            color: #2c3e50; /* dark text, since background is now lighter */
+        }
+
+        #services .card:nth-child(6) {
+            background:
+                    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+                    url('6.jpg') center/cover no-repeat;
+            color: #2c3e50; /* dark text, since background is now lighter */
+        }
+
+
         .contact p {
             margin: 0.75rem 0;
         }
@@ -234,7 +342,7 @@
 </head>
 <body>
 <div class="logo-banner">
-    <img src="logo.svg" alt="Alpine Property Services Logo">
+    <img src="logosvg.png" alt="Alpine Property Services Logo">
 </div>
 
 <header>
@@ -254,7 +362,7 @@
 
 <section id="about">
     <div class="section-box">
-        <h2>Über Uns</h2>
+        <h2>ℹ️ Über Uns</h2>
         <strong>Ein Jahrzehnt Hingabe und Vertrauen</strong><br>
         <p>
             Seit über 10 Jahren ist die Dino GmbH ein verlässlicher Partner für Hauswartung, Reinigung und Aussenpflege. Unsere Kunden profitieren von unserer Erfahrung, Effizienz und unserem hohen Maß an Professionalität. Jede Aufgabe wird mit Sorgfalt, Verantwortungsbewusstsein und Präzision ausgeführt – denn Ihre Immobilie verdient das Beste.
@@ -264,7 +372,7 @@
 
 <section id="why-us">
     <div class="section-box">
-        <h2>Warum Wir?</h2>
+        <h2>💡 Warum Wir?</h2>
         <p>Wir pflegen nicht nur Immobilien – wir bauen langfristige Beziehungen zu unseren Kunden auf. Darum:</p>
         <ul>
             <li><strong>Über 10 Jahre Erfahrung:</strong> Bewährte Kompetenz in der Immobilien- und Facilitypflege.</li>
@@ -276,9 +384,9 @@
     </div>
 </section>
 
-<section>
+<section id="excellence">
     <div class="section-box">
-        <h2>Umfassende Dienstleistungen. Herausragende Qualität.</h2>
+        <h2>🌟 Umfassende Dienstleistungen. Herausragende Qualität.</h2>
         <p>Egal ob regelmäßige Gebäudeunterhaltung, gründliche Reinigung oder saisonale Gartenpflege – die Dino GmbH bietet flexible Komplettlösungen, die genau auf Ihre Bedürfnisse abgestimmt sind. Wir arbeiten schnell, verantwortungsvoll und mit voller Hingabe für nachhaltige Ergebnisse. Überlassen Sie uns die Pflege Ihrer Immobilie – Sie konzentrieren sich auf das Wesentliche.</p>
     </div>
 </section>
